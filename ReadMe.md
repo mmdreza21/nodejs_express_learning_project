@@ -3,6 +3,11 @@
 Backend for a **language learning application** that supports interactive learning, real-time communication, and resource management for students and teachers.
 
 ---
+## 🧑‍💻 Admin Panel Integration
+This backend is fully compatible with the [Admin Panel for Language Learning](https://github.com/mmdreza21/admin-panel-learning) built with **NUXT**.  
+Use it to manage users, quizzes, tickets, and uploaded resources through a clean and intuitive UI.
+
+---
 
 ## 🚀 Features
 
@@ -64,13 +69,10 @@ Real-time communication is implemented for the Club module. Events are emitted w
 - A club message is created, checked, or deleted
 - A new answer is posted to a club message
 
-### Namespace: `clubMsgs`
 
-| Event Name       | Description                          |
-|------------------|--------------------------------------|
-| `add`            | Emitted on create/check/delete of a club message  
-| `answer`         | Emitted when a new answer is posted  
 
 ---
+
+
 
 
