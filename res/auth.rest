@@ -1,0 +1,31 @@
+POST   http://localhost:8484/api/auth/login HTTP/1.1
+content-type: application/json
+
+{
+  "email": "m21@m221.com",
+  "password": "123asd"
+}
+
+###
+GET http://localhost:8484/api/auth/user
+Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MGIzNzQwNmRjZDA5NjZjOWM2NGNiYzUiLCJlbWFpbCI6Im0xMkBtMjQuY29tIiwiaXNBZG1pbiI6ZmFsc2UsImlzVGVhY2hlciI6ZmFsc2UsImlhdCI6MTYyMjM3MzM4Mn0.vdTDlFvaUMocjAfvZjIS3b95is3ByKwWBYVbgJpOGJs
+
+###reSeting pass
+
+POST http://localhost:8484/api/auth/user/forgetpass?calBack=http://youraddress.com HTTP/1.1
+content-type: application/json
+
+{
+  "email": "m@m.com"
+}
+
+###
+
+POST http://localhost:8484/api/auth/user/resetpass/thatToketIgaveYouInQuery HTTP/1.1
+content-type: application/json
+
+{
+  "password": "123asd"
+}
+
+###

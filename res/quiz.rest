@@ -1,0 +1,46 @@
+
+POST  http://localhost:8484/api/quiz/create HTTP/1.1
+content-type: application/json
+Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MGFlMzI5ZWI4NTM2ZjRkNGM4OGE0OWQiLCJlbWFpbCI6Im0yQG0xLmNvbSIsImlzQWRtaW4iOmZhbHNlLCJpc1RlYWNoZXIiOnRydWUsIm5hdGl2ZSI6dHJ1ZSwiaWF0IjoxNjIzMTQ5OTMyfQ.rimNLIb6s5OwLCJ6cNJjjg5Xlp5klDceJWEYlFBfniM
+
+{
+    "title":"test",
+    "lang":"60ab6d61b3e2e710203af114",
+    "classId":"60b4d5f815956e6f9062fff8",
+    
+    "question":"1):jack is going to school. yesterday .... in the schoole too. 2:)jack is going to school. yesterday .... in the schoole too.3):jack is going to school. yesterday .... in the schoole too. "
+   
+}
+###
+
+GET http://localhost:8484/api/quiz/query/search?lang=61384059dc17b428247f213c&classId=&teacher=&isUpload=false HTTP/1.1
+
+
+###
+
+
+PATCH  http://localhost:8484/api/quiz/answer/60bf46432ea5f5347cf4fadf HTTP/1.1
+content-type: application/json
+Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MGIzNzQwNmRjZDA5NjZjOWM2NGNiYzUiLCJlbWFpbCI6Im0xMkBtMjQuY29tIiwiaXNBZG1pbiI6ZmFsc2UsImlzVGVhY2hlciI6ZmFsc2UsImlhdCI6MTYyMzE0ODY5Nn0.uddI_ClHymIFnpS07w8-DZKJ7hBmXhx_feQRjunZZBM
+ 
+  {
+"text":"1):narman khoob ast 2):this is a hard question 3): you know the answer why you ask then"
+  }
+###
+  
+PATCH  http://localhost:8484/api/quiz/score?sId=61385560ab18e23be49f92f6&qId=6152c3bf59e2232a387a80cb HTTP/1.1
+content-type: application/json
+Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MGFlMzI5ZWI4NTM2ZjRkNGM4OGE0OWQiLCJlbWFpbCI6Im0yQG0xLmNvbSIsImlzQWRtaW4iOmZhbHNlLCJpc1RlYWNoZXIiOnRydWUsIm5hdGl2ZSI6dHJ1ZSwiaWF0IjoxNjIzMTQ5OTMyfQ.rimNLIb6s5OwLCJ6cNJjjg5Xlp5klDceJWEYlFBfniM
+ 
+  {
+"score":20
+  }
+###
+
+PATCH  http://localhost:8484/api/quiz/score/60bf46432ea5f5347cf4fadf HTTP/1.1
+
+
+####
+GET http://localhost:8484/api/quiz/getanswers/60c059490384f8075c3bb3a2 HTTP/1.1
+Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MGFlMzI5ZWI4NTM2ZjRkNGM4OGE0OWQiLCJlbWFpbCI6Im0yQG0xLmNvbSIsImlzQWRtaW4iOmZhbHNlLCJpc1RlYWNoZXIiOnRydWUsIm5hdGl2ZSI6dHJ1ZSwiaWF0IjoxNjIzMTQ5OTMyfQ.rimNLIb6s5OwLCJ6cNJjjg5Xlp5klDceJWEYlFBfniM
+

@@ -1,0 +1,145 @@
+POST http://localhost:8484/api/class HTTP/1.1
+content-type: application/json
+Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MTJjNzZkMTIxZjAyMDMzMTQ2MWRkZTkiLCJlbWFpbCI6Iml0YWxraUBpdGFsa2kuY29tIiwiaXNBZG1pbiI6dHJ1ZSwiaXNUZWFjaGVyIjp0cnVlLCJpYXQiOjE2MzA0MDg1NTV9.Syb85VyFOPQ4o77551urMNkBJ8GIow6uVZvMqYJflOY
+
+{
+  "title": "how to say hello",
+  "classLink": "http://adkjjfhsaj.com",
+  "lang": "60ab6d8ab3e2e710203af115",
+  "price": 20000,
+  "startDate": "2021-05-25T11:22:03.087Z",
+  "endDate": "2022-10",
+  "isSolo": false,
+  "classLimit": 1,
+  "time": 25,
+  "lessons": 4,
+  "off": 10,
+  "dayOfWeek": [
+    {
+      "date": "2021-08-30T11:23:03.087Z",
+      "limit": 4
+    },
+    {
+      "date": "2021-08-29T19:12:03.087Z",
+      "limit": 4
+    },
+    {
+      "date": "2021-09-01T11:18:03.087Z",
+      "limit": 4
+    },
+    {
+      "date": "2021-08-28T09:05:03.087Z",
+      "limit": 4
+    },
+    {
+      "date": "2021-08-29T02:02:03.087Z",
+      "limit": 4
+    }
+  ]
+}
+
+
+###2
+
+
+PATCH   http://localhost:8484/api/class/60b4d36a19e5ce5884a85815 HTTP/1.1
+content-type: application/json
+Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MGIzNzQwNmRjZDA5NjZjOWM2NGNiYzUiLCJlbWFpbCI6Im0xMkBtMjQuY29tIiwiaXNBZG1pbiI6ZmFsc2UsImlzVGVhY2hlciI6ZmFsc2UsImlhdCI6MTYyMjM3MzM4Mn0.vdTDlFvaUMocjAfvZjIS3b95is3ByKwWBYVbgJpOGJs
+
+{
+  "id": "60b4d36a19e5ce5884a85816",
+  "link": "'dlknbv.com"
+}
+
+###3
+
+PATCH   http://localhost:8484/api/class/off/60b4d36a19e5ce5884a85815 HTTP/1.1
+content-type: application/json
+Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MGFlMzI5ZWI4NTM2ZjRkNGM4OGE0OWQiLCJlbWFpbCI6Im0yQG0xLmNvbSIsImlzQWRtaW4iOmZhbHNlLCJpc1RlYWNoZXIiOnRydWUsIm5hdGl2ZSI6dHJ1ZSwiaWF0IjoxNjIzMTQ5OTMyfQ.rimNLIb6s5OwLCJ6cNJjjg5Xlp5klDceJWEYlFBfniM
+
+{
+  "isInOff": true,
+  "off": 30
+}
+
+###4
+
+PUT   http://localhost:8484/api/class/60b4d5f815956e6f9062fff8 HTTP/1.1
+content-type: application/json
+Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MGFlMzI5ZWI4NTM2ZjRkNGM4OGE0OWQiLCJlbWFpbCI6Im0yQG0xLmNvbSIsImlzQWRtaW4iOmZhbHNlLCJpc1RlYWNoZXIiOnRydWUsIm5hdGl2ZSI6dHJ1ZSwiaWF0IjoxNjIzMTQ5OTMyfQ.rimNLIb6s5OwLCJ6cNJjjg5Xlp5klDceJWEYlFBfniM
+
+{
+  "title": "hi and hello",
+  "classLink": "http://adkjjfhs;aj.com",
+  "lang": "60ab6d8ab3e2e710203af115",
+  "price": 1,
+  "startDate": "2021-05-25T11:22:03.087Z",
+  "endDate": "2022-4",
+  "startTime": "1",
+  "endTime": "3",
+  "isSolo": false,
+  "classLimit": 2,
+  "time": 8,
+  "dayOfWeek": [
+    {
+      "date": "2021-07-28T12:22",
+      "limit": 2
+    },
+    {
+      "date": "2021-07-28T12:22:03.087Z",
+      "limit": 2
+    }
+  ]
+}
+
+####5
+DELETE    http://localhost:8484/api/class/60b4d5f815956e6f9062fff8 HTTP/1.1
+content-type: application/json
+Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MGFlMzI5ZWI4NTM2ZjRkNGM4OGE0OWQiLCJlbWFpbCI6Im0yQG0xLmNvbSIsImlzQWRtaW4iOmZhbHNlLCJpc1RlYWNoZXIiOnRydWUsIm5hdGl2ZSI6dHJ1ZSwiaWF0IjoxNjIzMTQ5OTMyfQ.rimNLIb6s5OwLCJ6cNJjjg5Xlp5klDceJWEYlFBfniM
+
+###
+
+
+
+
+####!//!fiscall6
+GET  http://localhost:8484/api/fiscal/all HTTP/1.1
+
+###7
+
+
+####!//!fiscall6
+GET  http://localhost:8484/api/class/student HTTP/1.1
+Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MGFlMzI5ZWI4NTM2ZjRkNGM4OGE0OWQiLCJlbWFpbCI6Im0yQG0xLmNvbSIsImlzQWRtaW4iOmZhbHNlLCJpc1RlYWNoZXIiOnRydWUsIm5hdGl2ZSI6dHJ1ZSwiaWF0IjoxNjIzMTQ5OTMyfQ.rimNLIb6s5OwLCJ6cNJjjg5Xlp5klDceJWEYlFBfniM
+
+###7
+
+
+POST   http://localhost:8484/api/class/612a183be7fd2720c8d51679?calBack=http://localhost:8484/static HTTP/1.1
+content-type: application/json
+Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MTI0ZTJkMjgwZDUzODQyMzBmYzg3NTEiLCJlbWFpbCI6Im0xQG0yMS5jb20iLCJpc0FkbWluIjpmYWxzZSwiaXNUZWFjaGVyIjpmYWxzZSwiaWF0IjoxNjMwMTQ2NDQ3fQ.8n3vYFptdANnN2qHYNUxmfkH5eXFwVA6aFoKGvQ3c3E
+
+{
+  "id": [
+    "612a183be7fd2720c8d5167b",
+    "612a183be7fd2720c8d5167c",
+    "612a183be7fd2720c8d5167d",
+    "612a183be7fd2720c8d5167e"
+  ],
+  "link": "mrMmd.com",
+  "fromBalance": true
+}
+
+###8
+# PATCH   http://localhost:8484/api/class?id=611152b36476981a04c24230,611152b36476981a04c24231&link=mrMmd.com&clasId=611152b36476981a04c2422f&Authority=000000000000000000000000000000577824&Status=OK HTTP/1.1
+# content-type: application/json
+# Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MGIzNzQwNmRjZDA5NjZjOWM2NGNiYzUiLCJlbWFpbCI6Im0xMkBtMjQuY29tIiwiaXNBZG1pbiI6ZmFsc2UsImlzVGVhY2hlciI6ZmFsc2UsImlhdCI6MTYyMjM3MzM4Mn0.vdTDlFvaUMocjAfvZjIS3b95is3ByKwWBYVbgJpOGJs
+
+####9
+
+PATCH   http://localhost:8484/api/class/user/done?classDateId=61387ce7afaf3a22cc5bc128&classId=61387ce7afaf3a22cc5bc124 HTTP/1.1
+content-type: application/json
+Authorization: baerer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MTM4NTU2MGFiMThlMjNiZTQ5ZjkyZjYiLCJlbWFpbCI6Im0xQG0yLmNvbSIsImlzQWRtaW4iOmZhbHNlLCJpc1RlYWNoZXIiOmZhbHNlLCJpYXQiOjE2MzEwOTE5NzN9.HzPHiTQ_46LMc2adX-SWM_ZPv3DXll7s737_CjA9ZSs
+
+###6124e2d280d5384230fc8751
+

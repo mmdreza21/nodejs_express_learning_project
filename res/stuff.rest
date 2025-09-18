@@ -1,0 +1,12 @@
+PATCH   http://localhost:8484/api/dynamicStuff?id=612df40652c90d00bcb3a760 HTTP/1.1
+Content-Type: application/json
+Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MGM0OWEzOTg4NjMyMDI2ZjAwNzU3YTkiLCJlbWFpbCI6Iml0YWxraUBpdGFsa2kuY29tIiwiaXNBZG1pbiI6dHJ1ZSwiaXNUZWFjaGVyIjpmYWxzZSwiaWF0IjoxNjIzNDk4MDczfQ.OZRhZs-uxhAJpEVNbBuB5lImKA3FWfM6deTFVIqemvw
+
+{
+"bottomImage":{"text":"eeeeeeeeee","image":"mmd"}
+}
+###
+ MainSlider
+midSlider
+pillsSlide
+bottomImage

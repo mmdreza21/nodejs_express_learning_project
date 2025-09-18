@@ -1,0 +1,104 @@
+s
+
+###
+POST http://localhost:2581/api/cat HTTP/1.1
+content-type: application/json
+
+{
+  "titleArabic": "الفندق",
+  "titleEnglish": "hottel"
+}
+
+###
+GET http://localhost:2581/api/cat HTTP/1.1
+
+###
+
+POST http://localhost:2581/api/admin HTTP/1.1
+content-type: application/json
+
+{
+  "title": "req.body.title",
+  "about": " req.body.about",
+  "price": "req.body.price",
+  "userId": "req.body.userId",
+  "category": "req.body.category",
+  "numInStock": "req.body.numInStock",
+  "tag": "req.body.tag"
+}
+
+
+###
+
+DELETE  http://localhost:2581/api/admin/6035f8886dca8f1938d5080f HTTP/1.1
+
+###
+
+POST http://localhost:2581/api/country HTTP/1.1
+content-type: application/json
+
+{
+  "name": "germany"
+}
+
+####
+
+GET  http://localhost:2581/api/product/search/getByquerys?searche=
+
+
+
+
+
+
+
+###
+GET  http://localhost:2581/api/country HTTP/1.1
+
+###
+
+
+GET  http://localhost:2581/api/product/country/6033830ae2ae9937c8589a94 HTTP/1.1
+
+
+
+###
+GET http://localhost:2581/api/product/all
+
+####
+GET  http://localhost:2581/api/product/all HTTP/1.1
+
+###
+GET  http://localhost:2581/api/product/tag/tag?t=sdasdq
+
+######
+GET  http://localhost:2581/api/product/country/6033830ae2ae9937c8589a94
+
+######
+GET  http://localhost:2581/api/product/contryCity/city/603646a463dc681bd8b027c6/6035f088fe69051b2cefed0c
+
+######
+GET  http://localhost:2581/api/product/cat/category/6034e6b0d5a2232e946b7d7a
+
+###
+
+POST http://localhost:2581/api/citys HTTP/1.1
+content-type: application/json
+
+{
+  "title": "benz",
+  "countryId": "6035f088fe69051b2cefed0c"
+}
+
+
+###
+
+GET http://localhost:2581/api/citys HTTP/1.1
+content-type: application/json
+
+###
+
+GET  http://localhost:2581/api/citys/6035f088fe69051b2cefed0c HTTP/1.1
+content-type: application/json
+
+####
+PATCH  http://localhost:2581/api/admin/image?prodId=603a0de19d457c3dbc9ede10&imgpath=images\\2021-02-27T09-16-17.711Z-WIN_20210215_18_57_58_Pro.jpg

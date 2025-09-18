@@ -1,0 +1,122 @@
+
+POST  http://localhost:8484/api/club HTTP/1.1
+content-type: application/json
+Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MGIyMTMzYzkxYTU4ZDQ2MzA0MTcwYzAiLCJlbWFpbCI6Im0xMkBtMTIuY29tIiwiaXNBZG1pbiI6ZmFsc2UsImlzVGVhY2hlciI6ZmFsc2UsImlhdCI6MTYyMjI4MzA2OH0.IKj61Mh0xSgkg0wfYMykjhZF23SNva3zZqV7VLgRpZM
+
+{
+    "title":"tests",
+    "text":"test test test va baz ham test test test test va baz ham test test test test va baz ham test",
+    "room":"Practice",
+    "classId":"60ace14bf9ccc80af478a755",
+    "forClass":true
+}
+
+####
+POST  http://localhost:8484/api/club HTTP/1.1
+content-type: application/json
+Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MGIyMTMzYzkxYTU4ZDQ2MzA0MTcwYzAiLCJlbWFpbCI6Im0xMkBtMTIuY29tIiwiaXNBZG1pbiI6ZmFsc2UsImlzVGVhY2hlciI6ZmFsc2UsImlhdCI6MTYyMjI4MzA2OH0.IKj61Mh0xSgkg0wfYMykjhZF23SNva3zZqV7VLgRpZM
+
+
+{
+    "title":"tests",
+    "text":"test test test va baz ham test test test test va baz ham test test test test va baz ham test",
+    "room":"Question",
+    "forClass":true
+    
+}
+####
+
+GET  http://localhost:8484/api/club/all/Question HTTP/1.1
+content-type: application/json
+Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MGE4YWY3OGU4NGFiZDNhZDAwZjc4MzUiLCJmdWxsTmFtZSI6bnVsbCwiZW1haWwiOiJtMUBtMS5jb20iLCJpc0FkbWluIjpmYWxzZSwiaXNUZWFjaGVyIjpmYWxzZSwiaWF0IjoxNjIxNjY3NzA0fQ.AqSMY_hvsFYSobjg2oUVdQkL3cjWQ-zRkZUdm5qeN70
+
+
+
+
+####
+
+PATCH   http://localhost:8484/api/club/60b22dd2be6dce0ce8b034b9 HTTP/1.1
+content-type: application/json
+Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MGIyMTMzYzkxYTU4ZDQ2MzA0MTcwYzAiLCJlbWFpbCI6Im0xMkBtMTIuY29tIiwiaXNBZG1pbiI6ZmFsc2UsImlzVGVhY2hlciI6ZmFsc2UsImlhdCI6MTYyMjI4MzA2OH0.IKj61Mh0xSgkg0wfYMykjhZF23SNva3zZqV7VLgRpZM
+
+{        
+    "title":"testsssssssssssss",
+    "text":"test test test va baz ham test test test test va baz ham test test test test va baz ham test"
+}
+###
+DELETE    http://localhost:8484/api/club/60b22dd2be6dce0ce8b034b9 HTTP/1.1
+content-type: application/json
+Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MGIyMTMzYzkxYTU4ZDQ2MzA0MTcwYzAiLCJlbWFpbCI6Im0xMkBtMTIuY29tIiwiaXNBZG1pbiI6ZmFsc2UsImlzVGVhY2hlciI6ZmFsc2UsImlhdCI6MTYyMjI4MzA2OH0.IKj61Mh0xSgkg0wfYMykjhZF23SNva3zZqV7VLgRpZM
+
+
+
+####
+
+GET  http://localhost:8484/api/club/class/Practice/60ace14bf9ccc80af478a755 HTTP/1.1
+content-type: application/json
+Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MGE4YWY3OGU4NGFiZDNhZDAwZjc4MzUiLCJmdWxsTmFtZSI6bnVsbCwiZW1haWwiOiJtMUBtMS5jb20iLCJpc0FkbWluIjpmYWxzZSwiaXNUZWFjaGVyIjpmYWxzZSwiaWF0IjoxNjIxNjY3NzA0fQ.AqSMY_hvsFYSobjg2oUVdQkL3cjWQ-zRkZUdm5qeN70
+
+####
+
+GET  http://localhost:8484/api/club/search?classId=60ace14bf9ccc80af478a755&forClass=true&room=Practice&search=te HTTP/1.1
+content-type: application/json
+Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MGE4YWY3OGU4NGFiZDNhZDAwZjc4MzUiLCJmdWxsTmFtZSI6bnVsbCwiZW1haWwiOiJtMUBtMS5jb20iLCJpc0FkbWluIjpmYWxzZSwiaXNUZWFjaGVyIjpmYWxzZSwiaWF0IjoxNjIxNjY3NzA0fQ.AqSMY_hvsFYSobjg2oUVdQkL3cjWQ-zRkZUdm5qeN70
+
+
+
+
+###
+POST http://localhost:8484/api/club/answer/6106645cd98eb811ccb4bdf2 HTTP/1.1
+Authorization:barer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MGYzYzk2ZTBmZjI2ZDM1MzRlNWUxNDIiLCJlbWFpbCI6Im0xQG0yLmNvbSIsImlzQWRtaW4iOmZhbHNlLCJpc1RlYWNoZXIiOmZhbHNlLCJpYXQiOjE2Mjc4MDg5ODh9.hjf62Qcce9_scmIr4X-Qt2W6h5VZKoy2e8B0Mh5yhWk
+content-type: application/json
+
+{
+     "text":"a secend answer a new ansver ansver"
+}
+
+###
+put http://localhost:8484/api/comments/answer/60ade6127b23083c68518f14 HTTP/1.1
+Authorization:barer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MGFkZTUwMzEwOTM4ODNhYTA1ZmRhMmQiLCJmdWxsTmFtZSI6bnVsbCwiZW1haWwiOiJtMUBtMTIuY29tIiwiaXNBZG1pbiI6ZmFsc2UsImlzVGVhY2hlciI6ZmFsc2UsImlhdCI6MTYyMjAwOTA5MX0.VnFfHhtNjP4uwOyZwNpLRnzxuYokF2iGdB5UVjoIOeE
+content-type: application/json
+
+{
+     "text":"noooooooooooooooooooo",
+     "id":"60ade7183c6a973b70eaeb80"
+}
+
+###
+DELETE  http://localhost:2581/api/comment/answer/6012aaaa1dc9ad0c205624d8 HTTP/1.1
+Authorization:barer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MDExNjA0YTNkOTc5YTIxZGM3Y2E3NDIiLCJuYW1lIjoibW1kcmV6YSBtbWQiLCJpc0FkbWluIjp0cnVlLCJpYXQiOjE2MTE4MTIwMTR9.psFrAq55uV1I_jTSiGO02WcxFyo0rfOUr8ezn9cMIHc
+content-type: application/json
+
+{
+     "id":"6013c4919dcbd418b8625ae5"
+}
+####
+
+
+GET  http://localhost:8484/api/club/admin/unchecked HTTP/1.1
+content-type: application/json
+Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MGM0OWEzOTg4NjMyMDI2ZjAwNzU3YTkiLCJlbWFpbCI6Iml0YWxraUBpdGFsa2kuY29tIiwiaXNBZG1pbiI6dHJ1ZSwiaXNUZWFjaGVyIjpmYWxzZSwiaWF0IjoxNjIzNDk4MDczfQ.OZRhZs-uxhAJpEVNbBuB5lImKA3FWfM6deTFVIqemvw
+
+####
+
+PATCH   http://localhost:8484/api/club/admin/check/60b21728784e514e086c2222 HTTP/1.1
+content-type: application/json
+Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MGM0OWEzOTg4NjMyMDI2ZjAwNzU3YTkiLCJlbWFpbCI6Iml0YWxraUBpdGFsa2kuY29tIiwiaXNBZG1pbiI6dHJ1ZSwiaXNUZWFjaGVyIjpmYWxzZSwiaWF0IjoxNjIzNDk4MDczfQ.OZRhZs-uxhAJpEVNbBuB5lImKA3FWfM6deTFVIqemvw
+
+
+####
+
+GET  http://localhost:8484/api/club/admin/answer/unchecked HTTP/1.1
+content-type: application/json
+Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MGM0OWEzOTg4NjMyMDI2ZjAwNzU3YTkiLCJlbWFpbCI6Iml0YWxraUBpdGFsa2kuY29tIiwiaXNBZG1pbiI6dHJ1ZSwiaXNUZWFjaGVyIjpmYWxzZSwiaWF0IjoxNjIzNDk4MDczfQ.OZRhZs-uxhAJpEVNbBuB5lImKA3FWfM6deTFVIqemvw
+
+####
+
+PATCH   http://localhost:8484/api/club/admin/answer/check/60c5906134d32d2f5c0eaef5 HTTP/1.1
+content-type: application/json
+Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MGM0OWEzOTg4NjMyMDI2ZjAwNzU3YTkiLCJlbWFpbCI6Iml0YWxraUBpdGFsa2kuY29tIiwiaXNBZG1pbiI6dHJ1ZSwiaXNUZWFjaGVyIjpmYWxzZSwiaWF0IjoxNjIzNDk4MDczfQ.OZRhZs-uxhAJpEVNbBuB5lImKA3FWfM6deTFVIqemvw
+
+####
+

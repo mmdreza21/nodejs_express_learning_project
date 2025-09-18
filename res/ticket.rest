@@ -1,0 +1,84 @@
+
+
+POST http://localhost:8484/api/ticket HTTP/1.1
+content-type: application/json
+Authorization: baerer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MTM4NTU2MGFiMThlMjNiZTQ5ZjkyZjYiLCJlbWFpbCI6Im0xQG0yLmNvbSIsImlzQWRtaW4iOmZhbHNlLCJpc1RlYWNoZXIiOmZhbHNlLCJpYXQiOjE2MzEwODE4NDR9.DxtDYu8D1Vr-yXURokFYhmqiFMo7QrdJtAsfMV2BpQw
+
+
+{
+  "text": " لوم از منش   استت",
+  "subject": "5سیشس تست" 
+}
+###
+##this is for studdent wants to be a teacher.
+PATCH  http://localhost:8484/api/user/student/switch/teacher HTTP/1.1
+content-type: application/json
+Authorization:baerer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MTM4NDFiMWRjMTdiNDI4MjQ3ZjIxNDgiLCJlbWFpbCI6ImVtYWlsQGVtYWlsLmNvbSIsImlzQWRtaW4iOmZhbHNlLCJpc1RlYWNoZXIiOmZhbHNlLCJpYXQiOjE2MzEwNzk1NzB9.KaRM4jKQSnt0kqrFTqml0A-8JfxrfbX8d76URliqz7w
+
+{
+"langs":["61384059dc17b428247f213c"],
+"teachingLang":"61384059dc17b428247f213c",
+"degree":"A1"
+}
+###
+POST http://localhost:8484/api/ticket HTTP/1.1
+content-type: application/json
+Authorization:barer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MTI0ZTJkMjgwZDUzODQyMzBmYzg3NTEiLCJlbWFpbCI6Im0xQG0yMS5jb20iLCJpc0FkbWluIjpmYWxzZSwiaXNUZWFjaGVyIjpmYWxzZSwiaWF0IjoxNjI5ODA3MzE0fQ.O5NmZYOSURZZC7HAH-MY731MkPqPBNDDEA-Wmw0kfTQ
+
+{
+  "subject": "درخاست برگشت پول",
+  "text": " کلاسی ک اننتخاب کردم برای من تشکیل نشد و درخاست بازگشت وجه را دارم",
+  "classDateId": "6124e2e380d5384230fc8754"
+}
+
+###
+GET http://localhost:8484/api/ticket/details/61386ac77e5a4f286ce01003 HTTP/1.1
+content-type: application/json
+Authorization:barer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MGFkZTUwMzEwOTM4ODNhYTA1ZmRhMmQiLCJmdWxsTmFtZSI6bnVsbCwiZW1haWwiOiJtMUBtMTIuY29tIiwiaXNBZG1pbiI6ZmFsc2UsImlzVGVhY2hlciI6ZmFsc2UsImlhdCI6MTYyMjAwOTA5MX0.VnFfHhtNjP4uwOyZwNpLRnzxuYokF2iGdB5UVjoIOeE
+
+
+
+
+###
+GET http://localhost:8484/api/ticket/user HTTP/1.1
+content-type: application/json
+Authorization: baerer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MTM4NTU2MGFiMThlMjNiZTQ5ZjkyZjYiLCJlbWFpbCI6Im0xQG0yLmNvbSIsImlzQWRtaW4iOmZhbHNlLCJpc1RlYWNoZXIiOmZhbHNlLCJpYXQiOjE2MzEwODE4NDR9.DxtDYu8D1Vr-yXURokFYhmqiFMo7QrdJtAsfMV2BpQw
+
+
+###
+POST http://localhost:8484/api/ticket/answer/61386c107e5a4f286ce0100d HTTP/1.1
+content-type: application/json
+Authorization: baerer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MTM4NTU2MGFiMThlMjNiZTQ5ZjkyZjYiLCJlbWFpbCI6Im0xQG0yLmNvbSIsImlzQWRtaW4iOmZhbHNlLCJpc1RlYWNoZXIiOmZhbHNlLCJpYXQiOjE2MzEwODE4NDR9.DxtDYu8D1Vr-yXURokFYhmqiFMo7QrdJtAsfMV2BpQw
+
+{
+  "text": "جوادی ایز 595665د کینگ"
+}
+
+
+
+# ###
+# GET  http://localhost:8484/api/ticket/admin/unchecked HTTP/1.1
+# content-type: application/json
+# Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MGM0OWEzOTg4NjMyMDI2ZjAwNzU3YTkiLCJlbWFpbCI6Iml0YWxraUBpdGFsa2kuY29tIiwiaXNBZG1pbiI6dHJ1ZSwiaXNUZWFjaGVyIjpmYWxzZSwiaWF0IjoxNjIzNDk4MDczfQ.OZRhZs-uxhAJpEVNbBuB5lImKA3FWfM6deTFVIqemvw
+
+####
+
+# PATCH   http://localhost:8484/api/ticket/admin/check/60ade56e7b23083c68518f13 HTTP/1.1
+# content-type: application/json
+# Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MGM0OWEzOTg4NjMyMDI2ZjAwNzU3YTkiLCJlbWFpbCI6Iml0YWxraUBpdGFsa2kuY29tIiwiaXNBZG1pbiI6dHJ1ZSwiaXNUZWFjaGVyIjpmYWxzZSwiaWF0IjoxNjIzNDk4MDczfQ.OZRhZs-uxhAJpEVNbBuB5lImKA3FWfM6deTFVIqemvw
+
+
+####
+
+# GET  http://localhost:8484/api/ticket/answer/admin/unchecked HTTP/1.1
+# content-type: application/json
+# Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MGM0OWEzOTg4NjMyMDI2ZjAwNzU3YTkiLCJlbWFpbCI6Iml0YWxraUBpdGFsa2kuY29tIiwiaXNBZG1pbiI6dHJ1ZSwiaXNUZWFjaGVyIjpmYWxzZSwiaWF0IjoxNjIzNDk4MDczfQ.OZRhZs-uxhAJpEVNbBuB5lImKA3FWfM6deTFVIqemvw
+
+# ####
+
+# PATCH   http://localhost:8484/api/ticket/answer/admin/check/60ade7ed89704434041ca639 HTTP/1.1
+# content-type: application/json
+# Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MGM0OWEzOTg4NjMyMDI2ZjAwNzU3YTkiLCJlbWFpbCI6Iml0YWxraUBpdGFsa2kuY29tIiwiaXNBZG1pbiI6dHJ1ZSwiaXNUZWFjaGVyIjpmYWxzZSwiaWF0IjoxNjIzNDk4MDczfQ.OZRhZs-uxhAJpEVNbBuB5lImKA3FWfM6deTFVIqemvw
+
+# ####
+

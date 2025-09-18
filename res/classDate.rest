@@ -1,0 +1,39 @@
+POST http://localhost:8484/api/classDate HTTP/1.1
+content-type: application/json
+Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MGFjYWFmN2Y4ZDljZTI5MzRiMDc3NmEiLCJmdWxsTmFtZSI6Im1tbWRyZXphIiwiZW1haWwiOiJtQG0xLmNvbSIsImlzQWRtaW4iOmZhbHNlLCJpc1RlYWNoZXIiOnRydWUsImlhdCI6MTYyMTkyODY5NX0.Te-vXZqmdnICIbXhcRPt9mOwu2vzppOf8lXOcuij40Y
+
+
+{
+  "classRoomId": "611152b36476981a04c2422f",
+  "date": "2021-11-04T07:46:02.876Z",
+  "limit": 4
+}
+
+###
+
+GET http://localhost:8484/api/classDate/query?sDate=2020-07-04T07:46:02.876Z&eDate=2022-10-04T06:46:02.876Z HTTP/1.1
+
+###
+###
+
+GET http://localhost:8484/api/classDate/studentDate?past=2020-07-04T07:46:02.876Z&last=2022-10-04T06:46:02.876Z HTTP/1.1
+Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MGIzNzQwNmRjZDA5NjZjOWM2NGNiYzUiLCJlbWFpbCI6Im0xMkBtMjQuY29tIiwiaXNBZG1pbiI6ZmFsc2UsImlzVGVhY2hlciI6ZmFsc2UsImlhdCI6MTYyMjM3MzM4Mn0.vdTDlFvaUMocjAfvZjIS3b95is3ByKwWBYVbgJpOGJs
+
+###
+
+PATCH http://localhost:8484/api/classDate/6110dd15a5dcd742f0ad5220 HTTP/1.1
+content-type: application/json
+Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MGFjYWFmN2Y4ZDljZTI5MzRiMDc3NmEiLCJmdWxsTmFtZSI6Im1tbWRyZXphIiwiZW1haWwiOiJtQG0xLmNvbSIsImlzQWRtaW4iOmZhbHNlLCJpc1RlYWNoZXIiOnRydWUsImlhdCI6MTYyMTkyODY5NX0.Te-vXZqmdnICIbXhcRPt9mOwu2vzppOf8lXOcuij40Y
+
+
+{
+  "date": "2021-08-04T07:46:02.876Z",
+  "limit": 4
+}
+
+###
+
+DELETE http://localhost:8484/api/classDate/6110e38a6caf862c88ba74d8 HTTP/1.1
+Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MGFjYWFmN2Y4ZDljZTI5MzRiMDc3NmEiLCJmdWxsTmFtZSI6Im1tbWRyZXphIiwiZW1haWwiOiJtQG0xLmNvbSIsImlzQWRtaW4iOmZhbHNlLCJpc1RlYWNoZXIiOnRydWUsImlhdCI6MTYyMTkyODY5NX0.Te-vXZqmdnICIbXhcRPt9mOwu2vzppOf8lXOcuij40Y
+
+###

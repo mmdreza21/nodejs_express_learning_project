@@ -1,0 +1,87 @@
+POST http://localhost:8484/api/comments/60acaaf7f8d9ce2934b0776a HTTP/1.1
+content-type: application/json
+Authorization:barer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MGYzYzk2ZTBmZjI2ZDM1MzRlNWUxNDIiLCJlbWFpbCI6Im0xQG0yLmNvbSIsImlzQWRtaW4iOmZhbHNlLCJpc1RlYWNoZXIiOmZhbHNlLCJpYXQiOjE2MjY1ODk1ODB9.dzb2S0pDejr4MS9KTcf6Wfk-qZStKZEaGCYi4eUBjBU
+
+{
+  "comment": "this is good and hae a comment",
+  "afterExam": true
+}
+
+###
+GET http://localhost:8484/api/comments/612c787021f020331461ddea HTTP/1.1
+content-type: application/json
+Authorization:barer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MGFkZTUwMzEwOTM4ODNhYTA1ZmRhMmQiLCJmdWxsTmFtZSI6bnVsbCwiZW1haWwiOiJtMUBtMTIuY29tIiwiaXNBZG1pbiI6ZmFsc2UsImlzVGVhY2hlciI6ZmFsc2UsImlhdCI6MTYyMjAwOTA5MX0.VnFfHhtNjP4uwOyZwNpLRnzxuYokF2iGdB5UVjoIOeE
+
+
+###
+PUT http://localhost:8484/api/commentss/60ade6127b23083c68518f14 HTTP/1.1
+content-type: application/json
+Authorization:barer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MGFkZTUwMzEwOTM4ODNhYTA1ZmRhMmQiLCJmdWxsTmFtZSI6bnVsbCwiZW1haWwiOiJtMUBtMTIuY29tIiwiaXNBZG1pbiI6ZmFsc2UsImlzVGVhY2hlciI6ZmFsc2UsImlhdCI6MTYyMjAwOTA5MX0.VnFfHhtNjP4uwOyZwNpLRnzxuYokF2iGdB5UVjoIOeE
+
+
+{
+  "comment": "new one whit edite"
+}
+
+###
+DELETE http://localhost:8484/api/comments/60ade6127b23083c68518f14 HTTP/1.1
+content-type: application/json
+Authorization:barer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MGFkZTUwMzEwOTM4ODNhYTA1ZmRhMmQiLCJmdWxsTmFtZSI6bnVsbCwiZW1haWwiOiJtMUBtMTIuY29tIiwiaXNBZG1pbiI6ZmFsc2UsImlzVGVhY2hlciI6ZmFsc2UsImlhdCI6MTYyMjAwOTA5MX0.VnFfHhtNjP4uwOyZwNpLRnzxuYokF2iGdB5UVjoIOeE
+
+
+
+###
+POST http://localhost:8484/api/comments/answer/60ade6127b23083c68518f14 HTTP/1.1
+Authorization:barer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MGFkZTUwMzEwOTM4ODNhYTA1ZmRhMmQiLCJmdWxsTmFtZSI6bnVsbCwiZW1haWwiOiJtMUBtMTIuY29tIiwiaXNBZG1pbiI6ZmFsc2UsImlzVGVhY2hlciI6ZmFsc2UsImlhdCI6MTYyMjAwOTA5MX0.VnFfHhtNjP4uwOyZwNpLRnzxuYokF2iGdB5UVjoIOeE
+content-type: application/json
+
+{
+  "text": "a new ansver"
+}
+
+###
+put http://localhost:8484/api/comments/answer/60ade6127b23083c68518f14 HTTP/1.1
+Authorization:barer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MGFkZTUwMzEwOTM4ODNhYTA1ZmRhMmQiLCJmdWxsTmFtZSI6bnVsbCwiZW1haWwiOiJtMUBtMTIuY29tIiwiaXNBZG1pbiI6ZmFsc2UsImlzVGVhY2hlciI6ZmFsc2UsImlhdCI6MTYyMjAwOTA5MX0.VnFfHhtNjP4uwOyZwNpLRnzxuYokF2iGdB5UVjoIOeE
+content-type: application/json
+
+{
+  "text": "noooooooooooooooooooo",
+  "id": "60ade7183c6a973b70eaeb80"
+}
+
+###
+###
+DELETE  http://localhost:2581/api/comments/answer/6012aaaa1dc9ad0c205624d8 HTTP/1.1
+Authorization:barer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MDExNjA0YTNkOTc5YTIxZGM3Y2E3NDIiLCJuYW1lIjoibW1kcmV6YSBtbWQiLCJpc0FkbWluIjp0cnVlLCJpYXQiOjE2MTE4MTIwMTR9.psFrAq55uV1I_jTSiGO02WcxFyo0rfOUr8ezn9cMIHc
+content-type: application/json
+
+{
+  "id": "6013c4919dcbd418b8625ae5"
+}
+
+###
+GET  http://localhost:8484/api/comments/admin/unchecked HTTP/1.1
+content-type: application/json
+Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MGM0OWEzOTg4NjMyMDI2ZjAwNzU3YTkiLCJlbWFpbCI6Iml0YWxraUBpdGFsa2kuY29tIiwiaXNBZG1pbiI6dHJ1ZSwiaXNUZWFjaGVyIjpmYWxzZSwiaWF0IjoxNjIzNDk4MDczfQ.OZRhZs-uxhAJpEVNbBuB5lImKA3FWfM6deTFVIqemvw
+
+####
+
+PATCH   http://localhost:8484/api/comments/admin/check/60ade56e7b23083c68518f13 HTTP/1.1
+content-type: application/json
+Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MGM0OWEzOTg4NjMyMDI2ZjAwNzU3YTkiLCJlbWFpbCI6Iml0YWxraUBpdGFsa2kuY29tIiwiaXNBZG1pbiI6dHJ1ZSwiaXNUZWFjaGVyIjpmYWxzZSwiaWF0IjoxNjIzNDk4MDczfQ.OZRhZs-uxhAJpEVNbBuB5lImKA3FWfM6deTFVIqemvw
+
+
+####
+
+GET  http://localhost:8484/api/comments/answer/admin/unchecked HTTP/1.1
+content-type: application/json
+Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MGM0OWEzOTg4NjMyMDI2ZjAwNzU3YTkiLCJlbWFpbCI6Iml0YWxraUBpdGFsa2kuY29tIiwiaXNBZG1pbiI6dHJ1ZSwiaXNUZWFjaGVyIjpmYWxzZSwiaWF0IjoxNjIzNDk4MDczfQ.OZRhZs-uxhAJpEVNbBuB5lImKA3FWfM6deTFVIqemvw
+
+####
+
+PATCH   http://localhost:8484/api/comments/answer/admin/check/60ade7ed89704434041ca639 HTTP/1.1
+content-type: application/json
+Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MGM0OWEzOTg4NjMyMDI2ZjAwNzU3YTkiLCJlbWFpbCI6Iml0YWxraUBpdGFsa2kuY29tIiwiaXNBZG1pbiI6dHJ1ZSwiaXNUZWFjaGVyIjpmYWxzZSwiaWF0IjoxNjIzNDk4MDczfQ.OZRhZs-uxhAJpEVNbBuB5lImKA3FWfM6deTFVIqemvw
+
+####
+

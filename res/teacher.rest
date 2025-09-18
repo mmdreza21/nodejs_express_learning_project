@@ -1,0 +1,101 @@
+POST   http://localhost:8484/api/auth/login/admin HTTP/1.1
+content-type: application/json
+
+{
+  "email": "italki@italki.com",
+  "password": "adminitalki2021"
+
+}
+
+###
+POST   http://localhost:8484/api/user/teacher HTTP/1.1
+content-type: application/json
+
+{
+  "email": "mmd@mmdreza.com",
+  "password": "adminitalki2021",
+  "fname": "mmmd",
+  "lname": "reza",
+  "gender": "male",
+  "age": "9",
+  "phone": "03695282",
+  "country": "60a8b23cf4feaf355092d8cb",
+  "city": "60a8b315097fdb1a28404127",
+  "langs": ["60f51b7204e6611078a2834a","60ab6d9bb3e2e710203af116"],
+  "teachingLang":"60f51b7204e6611078a2834a",
+  "address": "mmd abad",
+  "degree":"A1"
+}
+
+###
+
+###
+PATCH  http://localhost:8484/api/user/teacher HTTP/1.1
+content-type: application/json
+Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MGFjYWFmN2Y4ZDljZTI5MzRiMDc3NmEiLCJmdWxsTmFtZSI6Im1tbWRyZXphIiwiZW1haWwiOiJtQG0xLmNvbSIsImlzQWRtaW4iOmZhbHNlLCJpc1RlYWNoZXIiOnRydWUsImlhdCI6MTYyMTkyODY5NX0.Te-vXZqmdnICIbXhcRPt9mOwu2vzppOf8lXOcuij40Y
+
+
+{
+
+  "about": "slm koobi chetory",
+
+  "hourlyRateFrom": 50,
+  "trailPrice": 25,
+  "hasGroupClass": true,
+
+  "address": "کرج- خیابان مطهری ک بنبست 5 در اخر",
+  "bankAccountId": "6104337540039888",
+  "walletAddress": "4d46f5sd6f4s6df46ds5f46ds1fs9d4f",
+  "coinName": "bitcoin",
+  "iWannaCheck": true
+}
+
+####
+
+
+POST   http://localhost:8484/api/user/teacher/rate/60ab7f0b4157f449605c4940 HTTP/1.1
+content-type: application/json
+Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MGIzNzQwNmRjZDA5NjZjOWM2NGNiYzUiLCJlbWFpbCI6Im0xMkBtMjQuY29tIiwiaXNBZG1pbiI6ZmFsc2UsImlzVGVhY2hlciI6ZmFsc2UsImlhdCI6MTYyMjM3MzM4Mn0.vdTDlFvaUMocjAfvZjIS3b95is3ByKwWBYVbgJpOGJs
+
+{
+  "rateNum": 4
+}
+
+###
+
+
+POST http://localhost:8484/api/user/teacher/rate/612c787021f020331461ddea HTTP/1.1
+content-type: application/json
+Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MTJjN2JiYzM0NTJmZDMwYjQzZDNiYjIiLCJlbWFpbCI6Im0yMUBtMjIxLmNvbSIsImlzQWRtaW4iOmZhbHNlLCJpc1RlYWNoZXIiOmZhbHNlLCJpYXQiOjE2MzE2MzU0ODJ9.tRET3Dv1X8k4aIrnBP3vdwv9pfqxs_rm7EJM-Eibioc
+
+{
+  "rateNum": 3
+}
+
+
+######
+
+
+GET http://localhost:8484/api/user/teachers/search?lang=61384069dc17b428247f213e&city=613840fedc17b428247f2146&country=613840a9dc17b428247f2141&avrRate=2&groupe=false    HTTP/1.1
+
+######
+
+POST   http://localhost:8484/api/user/teacher/like/61c36077481c1c45dc9ef56b HTTP/1.1
+content-type: application/json
+Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MWMzNWRhZTQ4MWMxYzQ1ZGM5ZWY1NmEiLCJlbWFpbCI6IjMyMTJAbTIzMi5jb20iLCJpc0FkbWluIjpmYWxzZSwiaXNUZWFjaGVyIjpmYWxzZSwiaWF0IjoxNjQwMTkzNDkxfQ.Deovai5WVFn6hrEFXs_V3NBkIwYLIUcoYOGbrlLkgp0
+
+###
+
+GET    http://localhost:8484/api/user/admin/unchecked HTTP/1.1
+content-type: application/json
+Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MGM0OWEzOTg4NjMyMDI2ZjAwNzU3YTkiLCJlbWFpbCI6Iml0YWxraUBpdGFsa2kuY29tIiwiaXNBZG1pbiI6dHJ1ZSwiaXNUZWFjaGVyIjpmYWxzZSwiaWF0IjoxNjIzNDk4MDczfQ.OZRhZs-uxhAJpEVNbBuB5lImKA3FWfM6deTFVIqemvw
+
+######
+
+PATCH  http://localhost:8484/api/user/admin/check/60ae329eb8536f4d4c88a49d HTTP/1.1
+content-type: application/json
+Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MGM0OWEzOTg4NjMyMDI2ZjAwNzU3YTkiLCJlbWFpbCI6Iml0YWxraUBpdGFsa2kuY29tIiwiaXNBZG1pbiI6dHJ1ZSwiaXNUZWFjaGVyIjpmYWxzZSwiaWF0IjoxNjIzNDk4MDczfQ.OZRhZs-uxhAJpEVNbBuB5lImKA3FWfM6deTFVIqemvw
+
+
+
+

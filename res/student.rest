@@ -1,0 +1,59 @@
+
+POST   http://localhost:8484/api/auth/login HTTP/1.1
+content-type: application/json
+
+{
+ "email": "mmd@mmdreza.com",
+  "password": "adminitalki2021"
+}
+
+###
+
+POST   http://localhost:8484/api/auth/login HTTP/1.1
+content-type: application/json
+
+{
+"email":"3212@m232.com",
+"password":"123asd"
+
+}
+
+###
+
+POST http://localhost:8484/api/user/student HTTP/1.1
+content-type: application/json
+
+{
+"email":"3212@m232.com",
+"password":"123asd"
+
+}
+###
+
+###
+PATCH  http://localhost:8484/api/user/student/profile HTTP/1.1
+content-type: application/json
+Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MGE4YWY3OGU4NGFiZDNhZDAwZjc4MzUiLCJmdWxsTmFtZSI6bnVsbCwiZW1haWwiOiJtMUBtMS5jb20iLCJpc0FkbWluIjpmYWxzZSwiaXNUZWFjaGVyIjpmYWxzZSwiaWF0IjoxNjIxNjY3NzA0fQ.AqSMY_hvsFYSobjg2oUVdQkL3cjWQ-zRkZUdm5qeN70
+
+
+{
+    "fname":"mmmd",
+     "lname":"reza",
+     "gender":"male",
+      "about":"slm koobi chetory",
+     "age":"9",
+     "phone":"03695282",
+      "country":"60a8b23cf4feaf355092d8cb",
+      "city":"60a8b315097fdb1a28404127",
+      "address":"کرج- خیابان مطهری ک بنبست 5 در اخر"
+}
+####
+GET  http://localhost:8484/api/user/student HTTP/1.1
+Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MWMzNWRhZTQ4MWMxYzQ1ZGM5ZWY1NmEiLCJlbWFpbCI6IjMyMTJAbTIzMi5jb20iLCJpc0FkbWluIjpmYWxzZSwiaXNUZWFjaGVyIjpmYWxzZSwiaWF0IjoxNjQwMTkzNDkxfQ.Deovai5WVFn6hrEFXs_V3NBkIwYLIUcoYOGbrlLkgp0
+
+
+#####
+GET  http://localhost:8484/api/user/students/search?lang=60ab6d61b3e2e710203af114&city=60a8b315097fdb1a28404127&country=60a8b23cf4feaf355092d8cb&groupe=false   HTTP/1.1
+
+
+

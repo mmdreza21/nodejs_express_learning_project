@@ -1,0 +1,345 @@
+###  "user/"{
+####//! like rate stuff
+POST http://localhost:8484/api/teacher/rate/:id    [auth, objectId], teacherController.rate)
+
+###
+POST http://localhost:8484/api/teacher/like/:id    [auth, objectId], teacherController.like)
+
+###// form route //!student
+POST http://localhost:8484/api/student    studentController.signIn)
+
+###
+PATCH http://localhost:8484/api/student/profile    auth, studentController.PatchProfile)
+
+###
+PATCH http://localhost:8484/api/student/profileImage    auth, profile.single('image'), studentController.PatchProfileImage)
+
+###// get route //
+###//! GET UERs student
+GET http://localhost:8484/api/student    auth, studentController.getProfile)
+
+###
+GET http://localhost:8484/api/student/:id    studentController.studentDetails)
+
+###
+GET http://localhost:8484/api/students/search    GetTeCo.studentSearch)
+
+
+
+###//form route //!teacher
+POST http://localhost:8484/api/teacher    teacherController.singInTeacher)
+
+###
+PATCH http://localhost:8484/api/teacher    [auth, isteacher], teacherController.patcheacherProfile)
+
+###
+PATCH http://localhost:8484/api/teacher/image    [auth, isteacher], degree.array("image", 8), teacherController.patchDgreePhoto)
+
+###
+PATCH http://localhost:8484/api/teacher/profile    [auth, isteacher], profile.single("image"), teacherController.teacherProfile)
+
+###//! GET
+GET http://localhost:8484/api/techer/user/:id    [objectId], GetTeCo.teacherDetails)//! also for admin
+
+###
+GET http://localhost:8484/api/techer/user    [auth, isteacher], GetTeCo.teacherprofile)
+
+###
+GET http://localhost:8484/api/teachers    GetTeCo.allTeachers)
+
+###
+GET http://localhost:8484/api/teachers/search    GetTeCo.getByquerys)
+
+###//! GET ADMIN PART
+GET http://localhost:8484/api/admin/unchecked    [auth, admin, objectId], adminCo.getUnChecked)
+
+###//*Action
+PATCH http://localhost:8484/api/admin/check/:id    [auth, admin, objectId], adminCo.chekTeacher)
+
+###
+PATCH http://localhost:8484/api/admin/badget/:id    [auth, admin, objectId], degreeBadget.single("image"), adminCo.uploadBaget)
+
+###//intro video
+PATCH http://localhost:8484/api/teacher/video    [auth, isteacher], videoFile.single("video", 8), teacherController.patchVideo)
+
+###
+###
+##}}
+###  'auth/---'{
+
+###// rote
+POST http://localhost:8484/api/login    authController.login)
+
+###
+POST http://localhost:8484/api/login/admin    authController.loginAdmin)
+
+###
+GET http://localhost:8484/api/user    auth, authController.user)
+
+###//! forget pass
+POST http://localhost:8484/api/user/forgetpass    authController.forgetpass)
+
+###
+PATCH http://localhost:8484/api/user/resetpass/:token    authController.newpass)
+
+###
+###
+####}}}
+### "city/___"{
+GET http://localhost:8484/api/    cityController.getAlle)
+
+###
+GET http://localhost:8484/api/:id    cityController.getForContry)
+
+###
+###//!admin
+POST http://localhost:8484/api/    cityController.post)
+
+###
+PUT http://localhost:8484/api/:id    objectId, cityController.update)
+
+###
+DELETE http://localhost:8484/api/:id    objectId, cityController.delet)
+
+###
+###}}
+
+###//!
+POST http://localhost:8484/api/class    [auth, isTeacher], classCo.createClass)
+
+###
+PATCH http://localhost:8484/api/off/:id", [auth, objectId, isTeacher], classCo.patchDiscoumt)
+
+###
+PUT http://localhost:8484/api//:id", [auth, objectId, isTeacher], classCo.updateClasses)
+
+###
+DELETE http://localhost:8484/api/:id    [auth, objectId, isTeacher], classCo.removeClass)
+
+###//!
+GET http://localhost:8484/api/teacher/:id    [auth, objectId], classCo.getTecherClass)
+
+###
+
+###//Buy class "class/---" {
+   POST http://localhost:8484/api/:id", [auth, objectId], buyingClassCo.payment)
+
+###
+   PATCH http://localhost:8484/api/", auth, buyingClassCo.joinInClass)
+
+###
+####//done TODO  do here in load of some page's this should call and must check and give the money to teacher
+PATCH http://localhost:8484/api/user/done    [auth], classCo.patchClassDone)
+
+####
+GET http://localhost:8484/api/    classCo.getOneClass)
+
+####}}}
+###"club/---"{
+POST http://localhost:8484/api/    auth, ClubCo.create)
+
+###
+GET http://localhost:8484/api/class/:name/:id    [auth, objectId], ClubCo.getForRoom)
+
+###
+GET http://localhost:8484/api/all/:name    auth, ClubCo.getForAll)
+
+###
+GET http://localhost:8484/api/search    auth, ClubCo.search)
+
+###
+PATCH http://localhost:8484/api/:id    [auth, objectId], ClubCo.updateMsg)
+
+####
+DELETE http://localhost:8484/api/:id    [auth, objectId], ClubCo.removeMsg)
+
+###//!ADMIN check
+GET http://localhost:8484/api/admin/unchecked    [auth, admin], clubCo.getUnChecked)
+
+###
+PATCH http://localhost:8484/api/admin/check/:id    [auth, admin, objectId], ClubCo.checkMsg)
+
+###//!answer
+POST http://localhost:8484/api/answer/:id    [auth, objectId], ClubCo.prostAnswer)
+
+###
+PUT http://localhost:8484/api/answer/:id    [auth, objectId], ClubCo.putanswer)
+
+###
+DELETE http://localhost:8484/api/answer/:id/:ID    [auth, objectId], ClubCo.deleteAnswer)
+
+###//!ADMIN check
+GET http://localhost:8484/api/admin/answer/unchecked    [auth, admin], clubCo.getUnCheckedAns)
+
+###
+PATCH http://localhost:8484/api/admin/answer/check/:id    [auth, admin, objectId], ClubCo.CheckTheAns)
+
+###}
+
+### "comments/---"{ //!comment
+###
+POST http://localhost:8484/api/:id    [auth, objectid], comentcontroller.postcomment)
+
+###
+PUT http://localhost:8484/api/:cId    [auth, objectid], comentcontroller.putcomment)
+
+###
+DELETE http://localhost:8484/api/:id    [auth, admin, objectid], comentcontroller.deletcomment)
+
+###
+GET http://localhost:8484/api/:id    objectid, comentcontroller.getForProd)
+
+###
+   GET http://localhost:8484/api/user", admin, comentcontroller.getForUser)
+
+###//!admin CHECK DAN ZADAN
+   GET http://localhost:8484/api/admin/unchecked", [auth, admin], comentcontroller.getUnChecked)
+
+####
+   PATCH http://localhost:8484/api/admin/check/:id", [auth, admin, objectid], comentcontroller.checkMsg)
+
+###
+
+
+###//!answer
+POST http://localhost:8484/api/answer/:id    [auth, objectid], comentcontroller.prostAnswer)
+
+###
+PUT http://localhost:8484/api/answer/:id    [auth, objectid], comentcontroller.putanswer)
+
+###
+DELETE http://localhost:8484/api/answer/:id/:ID    [auth, objectid], comentcontroller.deleteAnswer)
+
+###//!admin CHECK DAN ZADAN
+GET http://localhost:8484/api/answer/admin/unchecked", [auth, admin], comentcontroller.getUnCheckedAns)
+
+###
+PATCH http://localhost:8484/api/answer/admin/check/:id", [auth, admin, objectid], comentcontroller.CheckTheAns)
+
+###}}}
+###
+GET http://localhost:8484/api/   country.getall)
+
+###//! admin action
+POST http://localhost:8484/api/    ('/', auth, flag.single('image'), country.post)
+
+####
+PUT http://localhost:8484/api//:id', objectId, country.edite)
+
+###
+DELETE http://localhost:8484/api//:id', objectId, country.delete)
+
+### "/exam/---" {{
+###
+   POST http://localhost:8484/api/', [auth], ExamCo.newExam)
+###
+   GET http://localhost:8484/api/teacher/:id', [auth, objectId], ExamCo.getTeacherExam)
+###
+   GET http://localhost:8484/api/lang/:id', [auth, objectId], ExamCo.getLevelLangExam)
+###
+   GET http://localhost:8484/api/lang', ExamCo.getLangExam)
+###
+   GET http://localhost:8484/api/', [auth], ExamCo.getAll)
+
+###//!examing
+###
+   POST http://localhost:8484/api/testing', ExamCo.exam)
+###}}
+###
+
+###"/fiscal/___"{
+   GET http://localhost:8484/api/all', fiscalCo.getAllFiscal)
+###
+   POST http://localhost:8484/api/checkout/:id', fiscalCo.teacherCheckOut)
+###
+   POST http://localhost:8484/api/student/pay', auth, buyClassCo.studentDepositPayment);
+
+###// get
+###
+   GET http://localhost:8484/api/student/verify', auth, buyClassCo.studentVPayment);
+
+###"lang/__"{
+###
+   POST http://localhost:8484/api/', langCo.sendLang)
+###
+   GET http://localhost:8484/api/', langCo.allLang)
+###
+   PUT http://localhost:8484/api/:id', langCo.updateLang)
+###}
+
+
+###"/note/___/{
+   POST http://localhost:8484/api/', auth, noteCo.createNote)
+###
+   GET http://localhost:8484/api/', auth, noteCo.getForUser)
+###
+   PUT http://localhost:8484/api/', auth, noteCo.updateNote)
+###
+   DELETE http://localhost:8484/api/note/61bf67369f695a424c54bde8
+   Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MWMzNWRhZTQ4MWMxYzQ1ZGM5ZWY1NmEiLCJlbWFpbCI6IjMyMTJAbTIzMi5jb20iLCJpc0FkbWluIjpmYWxzZSwiaXNUZWFjaGVyIjpmYWxzZSwiaWF0IjoxNjQwMTkzNDkxfQ.Deovai5WVFn6hrEFXs_V3NBkIwYLIUcoYOGbrlLkgp0
+
+###
+###}
+
+###"/quiz/-__"{
+###//! techer part
+###
+   POST http://localhost:8484/api/create', [auth, isTeacher], QuizCo.addQuiz)
+###
+   PATCH http://localhost:8484/api/score/:id/:sId', [auth, objectId, isTeacher], QuizCo.score)
+###
+   POST http://localhost:8484/api/uploadquiz', [auth, isTeacher], quiz.single('pdf'), QuizCo.uploadquiz)
+
+###//! student part
+###
+   PATCH http://localhost:8484/api/answer/:id', [auth, objectId], QuizCo.answer)
+###
+   PATCH http://localhost:8484/api/uploadanswer/:id', [auth, objectId], quiz.single("pdf"), QuizCo.uploadAnswer)
+
+###//!get part
+###
+   GET http://localhost:8484/api/getanswers/:id', [auth, isTeacher], QuizCo.getAnswers)
+###
+   GET http://localhost:8484/api/query/search', QuizCo.getByQuery)
+####}
+### "/api/takenExam/-_-_-"//{{
+###
+   GET http://localhost:8484/api/', [auth], TakenExamCo.getForStudent)
+###
+   GET http://localhost:8484/api/:id', [auth, isteacher], TakenExamCo.getForTecher)
+###}
+
+
+###"'/tiket/___-_-_-___--__'
+###//!comment
+###
+   POST http://localhost:8484/api/:id', [auth, objectId], TicketCo.postTicket)
+###
+   PUT http://localhost:8484/api/:cId', [auth, objectId], TicketCo.putTicket)
+###
+   DELETE http://localhost:8484/api/:id', [auth, admin, objectId], TicketCo.deleteTicket)
+
+###
+   GET http://localhost:8484/api/:id', objectId, TicketCo.getForProd)
+###
+   GET http://localhost:8484/api/user", admin, TicketCo.getForUser)
+###//!admin CHECK DAN ZADAN
+###
+   GET http://localhost:8484/api/admin/unchecked", [auth, admin], TicketCo.getUnChecked)
+###
+   PATCH http://localhost:8484/api/admin/check/:id", [auth, admin, objectId], TicketCo.checkMsg)
+
+
+###//!answer
+###
+   POST http://localhost:8484/api/answer/:id', [auth, objectId], TicketCo.prostAnswer)
+###
+   PUT http://localhost:8484/api/answer/:id', [auth, objectId], TicketCo.putanswer)
+###
+   DELETE http://localhost:8484/api/answer/:id/:ID', [auth, objectId], TicketCo.deleteAnswer)
+###//!admin CHECK DAN ZADAN
+###
+   GET http://localhost:8484/api/answer/admin/unchecked", [auth, admin], TicketCo.getUnCheckedAns)
+###
+   PATCH http://localhost:8484/api/answer/admin/check/:id", [auth, admin, objectId], TicketCo.CheckTheAns)
+###}}

@@ -1,0 +1,71 @@
+
+POST  http://localhost:8484/api/exam HTTP/1.1
+content-type: application/json
+Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MGFjYWFmN2Y4ZDljZTI5MzRiMDc3NmEiLCJmdWxsTmFtZSI6Im1tbWRyZXphIiwiZW1haWwiOiJtQG0xLmNvbSIsImlzQWRtaW4iOmZhbHNlLCJpc1RlYWNoZXIiOnRydWUsImlhdCI6MTYyMTkyODY5NX0.Te-vXZqmdnICIbXhcRPt9mOwu2vzppOf8lXOcuij40Y
+
+{
+    "lang":"60ab6d61b3e2e710203af114",
+    "question":"jack is going to school. yesterday .... in the schoole too. ",
+    "answers":{
+     "A":{"text":"was","opt":true},
+     "B":{"text":"were","opt":false},
+     "C":{"text":"is","opt":false},
+     "D":{"text":"am","opt":false}
+    }
+    
+}
+
+####
+
+
+GET  http://localhost:8484/api/exam/teacher/60acaaf7f8d9ce2934b0776a HTTP/1.1
+content-type: application/json
+Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MGFjYWFmN2Y4ZDljZTI5MzRiMDc3NmEiLCJmdWxsTmFtZSI6Im1tbWRyZXphIiwiZW1haWwiOiJtQG0xLmNvbSIsImlzQWRtaW4iOmZhbHNlLCJpc1RlYWNoZXIiOnRydWUsImlhdCI6MTYyMTkyODY5NX0.Te-vXZqmdnICIbXhcRPt9mOwu2vzppOf8lXOcuij40Y
+
+
+
+####
+
+
+GET  http://localhost:8484/api/exam/lang/60ab6d61b3e2e710203af114 HTTP/1.1
+content-type: application/json
+Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MGFjYWFmN2Y4ZDljZTI5MzRiMDc3NmEiLCJmdWxsTmFtZSI6Im1tbWRyZXphIiwiZW1haWwiOiJtQG0xLmNvbSIsImlzQWRtaW4iOmZhbHNlLCJpc1RlYWNoZXIiOnRydWUsImlhdCI6MTYyMTkyODY5NX0.Te-vXZqmdnICIbXhcRPt9mOwu2vzppOf8lXOcuij40Y
+
+
+####
+
+
+GET  http://localhost:8484/api/exam/lang?title=english HTTP/1.1
+content-type: application/json
+
+
+
+########
+
+####
+
+
+POST  http://localhost:8484/api/exam/testing HTTP/1.1
+content-type: application/json
+
+{
+    "arr":[{
+        "id":"60b60ce7c7b0f8633099c701",
+        "answer":"B"
+    },
+    {
+        "id":"60b60bf7c7b0f8633099c700",
+        "answer":"C"
+    },
+    {
+        "id":"60b60ddfc7b0f8633099c702",
+        "answer":"B"
+    },
+    {
+        "id":"60b60eb7c7b0f8633099c703",
+        "answer":"A"
+    }
+    
+    ]
+}
+

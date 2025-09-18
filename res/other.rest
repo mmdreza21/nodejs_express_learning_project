@@ -1,0 +1,45 @@
+
+###
+POST  http://localhost:8484/api/country HTTP/1.1
+content-type: application/json
+
+{
+"title":"USA"
+}
+
+
+###
+POST  http://localhost:8484/api/city HTTP/1.1
+content-type: application/json
+
+{
+"title":"karaj",
+"countryId":"60a8b23cf4feaf355092d8cb"
+}
+###
+
+POST  http://localhost:8484/api/lang HTTP/1.1
+content-type: application/json
+
+{
+    "title":"germany",
+    "fullTitle":"germany A1",
+    "level":"A1"
+}
+
+###     
+
+GET http://localhost:8484/api/lang HTTP/1.1
+
+####     
+
+PUT http://localhost:8484/api/lang/60ab6d8ab3e2e710203af115 HTTP/1.1
+content-type: application/json
+
+{
+    "title":"germany",
+    "fullTitle":"germany B1",
+    "level":"B1"
+}
+#### 
+

@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/MaterialDesign-Webfont/5.9.55/css/materialdesignicons.min.css"
+        integrity="sha512-vIgFb4o1CL8iMGoIF7cYiEVFrel13k/BkTGvs0hGfVnlbV6XjAA0M0oEHdWqGdAVRTDID3vIZPOHmKdrMAUChA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        i {
+            color: red
+        }
+    </style>
+</head>
+
+<body dir="rtl">
+    <h1 style="text-align: center; color: darkred;">play ground </h1>
+    <p class="hidden-xs-only"></p>
+    this is mmd's
+    <br />
+
+    <div>
+        <h4>
+            خرید کلاس توسط دانش آموز
+            <span>
+                : ${student.email}
+            </span>
+        </h4>
+        <h5>
+            برای کلاس :
+            <span>
+                ${classRoom.title}
+            </span>
+        </h5>
+        <h5>
+            معلم کلاس :
+            <span>
+                ${classRoom.creatorTeacher.email}
+            </span>
+        </h5>
+
+    </div>
+
+    total amount of classes was ${totalPrice} and you get ${amount} From Fiscal to teacher Balance email:(${teacherId})
+    & by class Room:(${classRooms[0].title})
+
+
+    <div>
+        <h4>
+            مبلغ کل کلاس:
+            <span>
+                (${totalPrice})
+            </span>
+        </h4>
+        <h5>
+            مبلغ واریزی برای شما :
+            <span>
+                ( ${amount})
+            </span>
+        </h5>
+        <h5>
+            از فیش به حساب معلم با ای دی :
+            <span>
+                (${teacherId})
+            </span>
+        </h5>
+
+    </div>
+
+    <audio controls id="mmdreza" loop="loop" autoplay="autoplay" preload="auto"
+        src="http://noorawin.com/wp-content/uploads/2021/08/Rauf-Faik-колыбельная-128.mp3" id="mmdreza">
+        <source src="http://noorawin.com/wp-content/uploads/2021/08/Rauf-Faik-колыбельная-128.mp3" type="audio/mpeg">
+    </audio>
+    <script type="text/javascript">
+        window.onload = async function () {
+            try {
+                await document.getElementById("mmdreza").play();
+
+
+                if (promise !== undefined) {
+                    promise.then(_ => {
+                        // Autoplay started!
+                    }).catch(error => {
+                        // Autoplay was prevented.
+                        // Show a "Play" button so that user can start playback.
+                    });
+                }
+            } catch (e) {
+                console.log(e);
+            }
+
+        }
+    </script>
+
+
+
+
+
+
+
+
+
+
+
+
+    <div style="text-align: center;">
+
+
+        <i class="mdi mdi-heart-outline"></i>
+        <i class="mdi mdi-cogs"></i>
+        <br />
+        mdi - check - box - multiple - outline <i class="mdi mdi-check-box-multiple-outline"></i>
+        <br />
+        mdi - map - marker - outline <i class="mdi mdi-map-marker-outline"></i>
+        <br />
+        mdi - home - city <i class="mdi mdi-home-city"></i>
+        <br />
+        mdi - crosshairs - gps <i class="mdi mdi-crosshairs-gps"></i>
+        <br />
+        mdi - earth <i class="mdi mdi-earth"></i>
+        <br />
+        mdi - image <i class="mdi mdi-image"></i>
+        <br />
+        mdi - pencil - outline <i class="mdi mdi-pencil-outline"></i>
+        <br />
+        mdi - delete -empty <i class="mdi mdi-delete-empty"></i>
+        <br />
+        mdi - flag - outline <i class="mdi mdi-flag-outline"></i>
+        <br />
+        mdi - translate <i class="mdi mdi-translate"></i>
+        <br />
+        mdi - text <i class="mdi mdi-text"></i>
+        <br />
+        mdi - web - box <i class="mdi mdi-web-box"></i>
+        <br />
+        mdi - school <i class="mdi mdi-school"></i>
+        <br />
+        mdi - comment - bookmark <i class="mdi mdi-comment-bookmark"></i>
+        <br />
+        mdi - cart - outline <i class="mdi mdi-cart-outline"></i>
+        <br />
+        mdi - alert - octagon <i class="mdi mdi-alert-octagon"></i>
+        <br />
+        mdi - ticket - account <i class="mdi mdi-ticket-account"></i>
+        <br />
+        mdi - refresh <i class="mdi mdi-refresh"></i>
+        <br />
+        mdi - check <i class="mdi mdi-check"></i>
+        <br />
+        mdi - delete <i class="mdi mdi-delete"></i>
+        <br />
+        mdi - delete -empty <i class="mdi mdi-delete-empty"></i>
+        <br />
+        mdi - cloud - braces <i class="mdi mdi-cloud-braces"></i>
+        <br />
+        mdi - cloud - circle <i class="mdi mdi-cloud-circle"></i>
+        <br />
+        mdi - cloud - upload <i class="mdi mdi-cloud-upload"></i>
+        <br />
+        mdi - checkbox - marked - outline <i class="mdi mdi-checkbox-marked-outline"></i>
+        <br />
+        mdi - checkbox - multiple - blank - outline <i class="mdi mdi-checkbox-multiple-blank-outline" aria -
+            hidden="true"></i>
+        <br />
+        mdi - arrow - left <i class="mdi mdi-arrow-left"></i>
+        <br />
+        mdi - clock - time - nine - outline <i class="mdi mdi-clock-time-nine-outline"></i>
+        <br />
+        mdi - piggy - bank <i class="mdi mdi-piggy-bank"></i>
+        <br />
+        mdi - web - box <i class="mdi mdi-web-box"></i>
+        <br />
+        mdi - credit - card - multiple - outline <i class="mdi mdi-credit-card-multiple-outline"></i>
+        <br />
+        mdi - account - circle <i class="mdi mdi-account-circle"></i>
+        <br />
+        mdi - checkbox - marked <i class="mdi mdi-checkbox-marked"></i>
+        <br />
+        mdi - school <i class="mdi mdi-school"></i>
+        <br />
+        mdi - help - box <i class="mdi mdi-help-box"></i>
+        <br />
+        mdi - help - network <i class="mdi mdi-help-network"></i>
+        <br />
+        mdi - chat - question <i class="mdi mdi-chat-question"></i>
+        <br />
+        mdi - adobe - acrobat <i class="mdi mdi-adobe-acrobat"></i>
+        <br />
+    </div>
+</body>
+
+</html>
